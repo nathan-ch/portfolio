@@ -4,10 +4,8 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import { ReactComponent as Tool } from "feather-icons/dist/icons/tool.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -60,49 +58,35 @@ const PrimaryButton = styled(PrimaryButtonBase)(props => [
 ]);
 
 export default ({
-  subheading = "Our Expertise",
-  heading = (
+  subheading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      subheading
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
-  imageSrc = TeamIllustrationSrc,
+  heading = (
+    <>
+      Heading
+    </>
+  ),
+  description = "Description",
+  primaryButtonText = "Visiter le site",
+  primaryButtonUrl = "",
+  imageSrc ="",
   buttonRounded = true,
   imageRounded = true,
   imageBorder = false,
   imageShadow = false,
   showDecoratorBlob = false,
-  textOnLeft = true,
+  textOnLeft = "",
   features = null,
   iconRoundedFull = true,
   iconFilled = true,
-  iconContainerCss = null
+  iconContainerCss = tw`bg-teal-300 text-teal-800`,
+  featureIcon = Tool,
+  featureTitle = "Stack ",
+  featureDescription = ""
+
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
-
-  /*
-   * Change the features variable as you like, add or delete objects
-   * `icon` must be a React SVG component. See how BriefcaseIcon is imported above. For a full list of available icons, see Feather Icons.
-   */
-  const defaultFeatures = [
-    {
-      Icon: BriefcaseIcon,
-      title: "Professionalism",
-      description: "We have the best professional marketing people across the globe just to work with you.",
-      iconContainerCss: tw`bg-teal-300 text-teal-800`
-    },
-    {
-      Icon: MoneyIcon,
-      title: "Affordable",
-      description: "We promise to offer you the best rate we can - at par with the industry standard.",
-      iconContainerCss: tw`bg-red-300 text-red-800`
-    }
-  ];
-
-  if (!features) features = defaultFeatures;
 
   return (
     <Container>
@@ -117,24 +101,21 @@ export default ({
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
             <Features>
-              {features.map((feature, index) => (
-                <Feature key={index}>
+                <Feature>
                   <FeatureHeadingContainer>
                     <FeatureIconContainer
                       iconFilled={iconFilled}
                       iconRoundedFull={iconRoundedFull}
-                      css={feature.iconContainerCss || iconContainerCss}
+                      css={iconContainerCss}
                     >
-                      {<feature.Icon />}
                     </FeatureIconContainer>
-                    <FeatureHeading>{feature.title}</FeatureHeading>
+                    <FeatureHeading>{featureTitle}</FeatureHeading>
                   </FeatureHeadingContainer>
-                  <FeatureDescription>{feature.description}</FeatureDescription>
+                  <FeatureDescription>{featureDescription}</FeatureDescription>
                 </Feature>
-              ))}
             </Features>
 
-            <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
+            <PrimaryButton buttonRounded={buttonRounded} as="a" target="_blank" href={primaryButtonUrl}>
               {primaryButtonText}
             </PrimaryButton>
           </TextContent>

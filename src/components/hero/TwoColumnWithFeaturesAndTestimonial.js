@@ -31,7 +31,7 @@ export default ({
   imageSrc = "https://media-exp1.licdn.com/dms/image/sync/C4D27AQGXCTnCKx0gcQ/articleshare-shrink_800/0?e=1595498400&v=beta&t=KrQsbGX2tLostYm0Q6VntKZW5BltqNGt526HYRgKuU4",
   imageDecoratorBlob = true,
   primaryButtonUrl = "https://google.com",
-  primaryButtonText = "Voir mes réalisations",
+  primaryButtonText = "Mes réalisations",
   buttonRounded = true,
 }) => {
   const buttonRoundedCss = buttonRounded && tw`rounded-full`;

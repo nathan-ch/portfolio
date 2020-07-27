@@ -83,7 +83,7 @@ export default ({
   iconFilled = true,
   iconContainerCss = tw`bg-teal-300 text-teal-800`,
   featureIcon = Tool,
-  featureTitle = "Stack ",
+  featureTitle = "Stack technique ",
   featureDescription = ""
 
 }) => {

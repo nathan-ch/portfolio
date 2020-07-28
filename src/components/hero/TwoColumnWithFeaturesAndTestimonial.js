@@ -28,7 +28,7 @@ const ImageDecoratorBlob = styled(SvgDecoratorBlob1)`
 export default ({
   heading1 = "Je suis",
   heading2 = "Nathan Château, développeur web.",
-  imageSrc = "https://media-exp1.licdn.com/dms/image/sync/C4D27AQGXCTnCKx0gcQ/articleshare-shrink_800/0?e=1595588400&v=beta&t=IqFJQIHuMyrevqBWisWT_cdJNAHDHcpDjr4v_OxaYQU",
+  imageSrc = "https://i.ibb.co/5nJMJfh/10122019-PANA2146.jpg",
   imageDecoratorBlob = true,
   primaryButtonUrl = "https://google.com",
   primaryButtonText = "Mes réalisations",

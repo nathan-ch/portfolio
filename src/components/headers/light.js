@@ -10,7 +10,7 @@ import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
 const Header = tw.header`
-  flex justify-between items-center
+  flex justify-center items-center
   max-w-screen-xl mx-auto
 `;
 
@@ -52,7 +52,7 @@ export const MobileNavLinks = motion.custom(styled.div`
 `);
 
 export const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center
+  hidden lg:flex flex-1 justify-center items-center
 `;
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
@@ -73,6 +73,8 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
     <NavLinks key={1}>
       <NavLink href="tel:+33629696525">Appeler</NavLink>
       <NavLink href="mailto:nathanchateau@gmail.com">Envoyer un email</NavLink>
+      <NavLink href="https://www.linkedin.com/in/nathan-chateau/">Linkedin</NavLink>
+      <NavLink href="https://www.malt.fr/profile/nathanchateau">Malt</NavLink>
       <NavLink href="https://github.com/nathan-ch">Github</NavLink>
     </NavLinks>
   ];

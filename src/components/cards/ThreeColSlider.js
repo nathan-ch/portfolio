@@ -4,9 +4,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { SectionHeading } from "components/misc/Headings";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons";
-import { ReactComponent as PriceIcon } from "feather-icons/dist/icons/dollar-sign.svg";
 import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg";
-import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
 
@@ -50,7 +48,6 @@ const RatingsInfo = styled.div`
     ${tw`w-6 h-6 text-yellow-500 fill-current`}
   }
 `;
-const Rating = tw.span`ml-2 font-bold`;
 
 const Description = tw.p`text-sm leading-loose mt-2 sm:mt-4`;
 
@@ -91,36 +88,40 @@ export default () => {
   /* Change this according to your needs */
   const cards = [
     {
-      imageSrc: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
-      title: "Wyatt Residency",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Rome, Italy",
-      pricingText: "USD 39/Day",
-      rating: "4.8",
+      imageSrc: "https://i.ibb.co/t2SGJRm/smartmockups-kcxfjo20.png",
+      title: "Only Bloc",
+      description: "Comparateur de salles d'escalade",
+      locationText: "Ruby on Rails",
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
-      title: "Soho Paradise",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Ibiza, Spain",
-      pricingText: "USD 50/Day",
-      rating: 4.9,
+      imageSrc: "https://i.ibb.co/Qr1Zn3Q/smartmockups-kcym7plr.png",
+      title: "Simple Loc",
+      description: "Gestion des visites et dossiers entre propriétaires et locataires",
+      locationText: "Ruby on Rails | React",
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
-      title: "Hotel Baja",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Palo Alto, CA",
-      pricingText: "USD 19/Day",
-      rating: "5.0",
+      imageSrc: "https://i.ibb.co/k0yYfbH/smartmockups-kcxdx4v6.png",
+      title: "Covid 19 Stats",
+      description: "Statistiques sur le Covid 19",
+      locationText: "React",
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1571770095004-6b61b1cf308a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
-      title: "Hudak Homes",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Arizona, RAK",
-      pricingText: "USD 99/Day",
-      rating: 4.5,
+      imageSrc: "https://i.ibb.co/4P3p9cW/smartmockups-kda6l0ln.png",
+      title: "Le Mouton Kiwi",
+      description: "Blog voyage",
+      locationText: "WordPress",
+    },
+    {
+      imageSrc: "https://i.ibb.co/JpH0m4F/smartmockups-kcymzous.png",
+      title: "Elec Concept",
+      description: "Site vitrine électricien",
+      locationText: "WordPress",
+    },
+    {
+      imageSrc: "https://i.ibb.co/2cnM3Jc/smartmockups-kcynau86.png",
+      title: "Relaxation Evolutive",
+      description: "Site vitrine et boutique de sophrologie",
+      locationText: "WordPress",
     },
   ]
 
@@ -128,7 +129,7 @@ export default () => {
     <Container>
       <Content>
         <HeadingWithControl>
-          <Heading>Popular Hotels</Heading>
+          <Heading>Mes réalisation</Heading>
           <Controls>
             <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
             <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>
@@ -141,10 +142,6 @@ export default () => {
               <TextInfo>
                 <TitleReviewContainer>
                   <Title>{card.title}</Title>
-                  <RatingsInfo>
-                    <StarIcon />
-                    <Rating>{card.rating}</Rating>
-                  </RatingsInfo>
                 </TitleReviewContainer>
                 <SecondaryInfoContainer>
                   <IconWithText>
@@ -153,16 +150,10 @@ export default () => {
                     </IconContainer>
                     <Text>{card.locationText}</Text>
                   </IconWithText>
-                  <IconWithText>
-                    <IconContainer>
-                      <PriceIcon />
-                    </IconContainer>
-                    <Text>{card.pricingText}</Text>
-                  </IconWithText>
                 </SecondaryInfoContainer>
                 <Description>{card.description}</Description>
               </TextInfo>
-              <PrimaryButton>Book Now</PrimaryButton>
+              <PrimaryButton>Plus d'infos</PrimaryButton>
             </Card>
           ))}
         </CardSlider>
